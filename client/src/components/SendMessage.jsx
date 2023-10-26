@@ -42,7 +42,7 @@ const SendMessage = ({ receiverId }) => {
         <input
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          className="input w-full text-darkestpink focus:outline-none focus:ring-pink focus:ring-2 bg-lightestpink rounded"
+          className="relative m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-pink bg-lightestpink bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-darkestpink outline-pink focus:ring-pink transition duration-200 ease-in-out focus:z-[3] focus:border-pink focus:text-darkestpink focus:shadow-pink focus:outline-pink dark:border-darkestpink dark:text-darkestpink dark:placeholder:text-darkestpink dark:focus:border-pink"
           type="text"
         />
         <button type="submit" className="w-auto bg-lightestpink text-pink rounded-r-lg px-5 text-sm">

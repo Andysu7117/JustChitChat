@@ -14,7 +14,7 @@ const Message = ({ message }) => {
     <div className={`flex ${message.senderId._id === data.me._id ? "justify-end" : "justify-start"} mb-4`}>
       <div className="flex items-center">
         <img src={message.senderId.profilePic} alt="Avatar" className="w-10 h-10 rounded-full mr-4"/>
-        <div className={`${message.senderId._id === data.me._id ? "bg-lightestpink" : "bg-blue"} p-4 rounded-lg`}>
+        <div className={`${message.senderId._id === data.me._id ? "bg-lightpink" : "bg-blue"} p-4 rounded-lg`}>
           <div className={`font-bold mb-1 ${message.senderId._id === data.me._id ? "text-darkestpink" : "text-darkblue"}`}>{message.senderId.username}</div>
           <p className={`${message.senderId._id === data.me._id ? "text-darkestpink" : "text-darkblue"}`}>{message.message}</p>
         </div>

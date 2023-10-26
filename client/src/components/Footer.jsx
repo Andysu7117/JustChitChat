@@ -5,8 +5,8 @@ import twitterAnimation from '../assets/twitter.json';
 
 function Footer() {
     return (
-        <footer className="bg-gray-800 text-white">
-        <div className="container mx-auto p-5 flex justify-center items-center">
+        <footer className="bg-darkpink text-white">
+        <div className="container mx-auto p-2 flex justify-center items-center">
             <a 
                 href="#" 
                 target="_blank" 
@@ -35,3 +35,5 @@ function Footer() {
     </footer>       
     );
 }
+
+export default Footer
