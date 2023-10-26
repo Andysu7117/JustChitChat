@@ -2,7 +2,6 @@ import { useState, useEffect, useRef, useContext } from 'react';
 import { useQuery, useMutation, useSubscription } from '@apollo/client';
 import ChatBox from '../components/Chatbox';
 import FriendsList from '../components/FriendsList'
-import { QUERY_ME } from '../../utils/queries'
 
 export default function Chat() {
     const [receiverId, setReceiverId] = useState(null);

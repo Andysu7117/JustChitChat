@@ -5,7 +5,7 @@ import './input.css'
 import App from './App'
 import Home from "./pages/Home";
 import Chat from "./pages/Chat";
-import Search from "./pages/Search"
+import People from "./pages/People"
 import Error from "./pages/Error"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
@@ -29,8 +29,8 @@ const router = createBrowserRouter([
                 path: '/chat',
                 element: <Chat />
             }, {
-                path: '/search',
-                element: <Search />
+                path: '/people',
+                element: <People />
             }
         ]
     }

@@ -10,11 +10,9 @@ export default function SearchList({ users }) {
                 variables: {
                     userId: userId
                 }
-            });
-            // Optionally: Display a success message or do other post-mutation actions
+            });       
         } catch (error) {
             console.error("Error adding friend:", error);
-            // Optionally: Handle the error, e.g., by displaying an error message to the user
         }
     };
 

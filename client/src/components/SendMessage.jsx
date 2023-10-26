@@ -37,15 +37,15 @@ const SendMessage = ({ receiverId }) => {
   };
 
   return (
-    <div className="bg-white absolute bottom-0 w-full py-10 shadow-lg">
+    <div className="bg-white absolute w-full bottom-0 py-10">
       <form onSubmit={handleSendMessage} className="px-2 containerWrap flex">
         <input
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          className="input w-full text-darkestpink focus:outline-none bg-lightestpink rounded-r-none"
+          className="input w-full text-darkestpink focus:outline-none focus:ring-pink focus:ring-2 bg-lightestpink rounded"
           type="text"
         />
-        <button type="submit" className="w-auto bg-gray-500 text-pink rounded-r-lg px-5 text-sm">
+        <button type="submit" className="w-auto bg-lightestpink text-pink rounded-r-lg px-5 text-sm">
           Send
         </button>
       </form>

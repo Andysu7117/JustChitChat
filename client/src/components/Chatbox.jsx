@@ -50,17 +50,16 @@ const ChatBox = ({ receiverId }) => {
   if (loading) return <p className="text-center text-pink">Loading...</p>;
   if (error) return <p className="text-center text-red-500">Error: {error.message}</p>;
 
-  console.log("id's", receiverId)
-  console.log("data", data)
-  console.log("messages", messages)  
-
   return (
-    <div className="p-4 h-screen overflow-y-auto">
-      {messages.map((message) => (
-        <Message key={message.id} message={message} />
-      ))}
-      <div ref={messagesEndRef}></div>
-      <SendMessage receiverId={receiverId}/>
+    <div className="p-4 h-5/6 overflow-y-auto">
+      <div ref={messagesEndRef} className="w-full">
+        <div>
+          {messages.map((message) => (
+            <Message key={message.id} message={message} />
+          ))}
+          </div>
+      </div>
+        <div className="w-1/2"><SendMessage receiverId={receiverId}/></div>
     </div>
   );
 };

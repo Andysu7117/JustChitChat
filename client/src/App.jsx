@@ -8,6 +8,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import { ChatProvider } from "../utils/GlobalState";
 
 const httpLink = createHttpLink({
@@ -35,6 +36,7 @@ function App() {
       <ChatProvider>
         <Header />
         <Outlet />
+        <Footer />
       </ChatProvider>
     </ApolloProvider>
   );

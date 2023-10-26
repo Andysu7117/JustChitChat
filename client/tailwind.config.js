@@ -7,7 +7,9 @@ export default {
       'darkpink': '#ff8fab',
       'pink': '#ffb3c6',
       'lightpink': '#ffc2d1',
-      'lightestpink': '#ffe5ec'
+      'lightestpink': '#ffe5ec',
+      'blue': '#89CFF0',
+      'darkblue': '#1338BE'
     },
     extend: {},
   },
