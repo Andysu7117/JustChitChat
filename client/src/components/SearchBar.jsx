@@ -11,9 +11,6 @@ export default function SearchBar({ onFormSubmit}) {
         skip: !searchTerm
     });
 
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error: {error.message}</p>;
-
     useEffect(() => {
         if (data && data.user) {
             onFormSubmit([data.user]);
@@ -25,6 +22,9 @@ export default function SearchBar({ onFormSubmit}) {
         e.preventDefault();
     };
 
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error.message}</p>;
+    
     return (
         <div class="mb-3">
             <form onSubmit={handleSearchSubmit}>
