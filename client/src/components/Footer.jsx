@@ -5,7 +5,7 @@ import twitterAnimation from '../assets/twitter.json';
 
 function Footer() {
     return (
-        <footer className="bg-darkpink text-white">
+        <footer className="bg-darkestpink text-white">
         <div className="container mx-auto p-2 flex justify-center items-center">
             <a 
                 href="#" 

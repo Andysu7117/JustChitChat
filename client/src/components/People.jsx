@@ -1,8 +1,13 @@
-import { useMutation } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
 import { ADD_FRIEND } from '../../utils/mutations';
+import { QUERY_ME} from '../../utils/queries'
 
 export default function SearchList({ users }) {
     const [addFriend] = useMutation(ADD_FRIEND);
+    const { data, loading, error } = useQuery(QUERY_ME);
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error.message}</p>;
+    const friendsList = data.me.friends;
 
     const handleAddFriend = async (userId) => {
         try {
@@ -30,13 +35,30 @@ export default function SearchList({ users }) {
                     </div>
                     <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
                         <div className="mt-1 flex items-center gap-x-1.5">
-                            <button
+                            {currentUserFriendsIds.includes(user._id) ? (
+                                    <button
+                                        type="button"
+                                        className="inline-flex w-full justify-center rounded-md bg-blue px-3 py-2 text-sm font-semibold text-darkestpink shadow-sm"
+                                        disabled
+                                    >
+                                    Friends
+                                    </button>
+                                ) : (
+                                    <button
+                                        type="button"
+                                        className="inline-flex w-full justify-center rounded-md bg-lightestpink px-3 py-2 text-sm font-semibold text-darkestpink shadow-sm hover:bg-pink sm:ml-3 sm:w-auto"
+                                        onClick={() => handleAddFriend(user._id)}
+                                    >
+                                    Add Friend
+                                    </button>
+                                )}
+                            {/* <button
                                 type="button"
                                 className="inline-flex w-full justify-center rounded-md bg-lightestpink px-3 py-2 text-sm font-semibold text-darkestpink shadow-sm hover:bg-pink sm:ml-3 sm:w-auto"
                                 onClick={() => handleAddFriend(user._id)}
                             >
                             Add Friend
-                            </button>
+                            </button> */}
                         </div>
                     </div>
                 </li>
