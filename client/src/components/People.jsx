@@ -37,7 +37,7 @@ export default function SearchList({ users }) {
                     </div>
                     <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
                         <div className="mt-1 flex items-center gap-x-1.5">
-                            {friendsList.includes(user._id) ? (
+                            {friendId.includes(user._id) ? (
                                     <button
                                         type="button"
                                         className="inline-flex w-full justify-center rounded-md bg-blue px-3 py-2 text-sm font-semibold text-darkestpink shadow-sm"
