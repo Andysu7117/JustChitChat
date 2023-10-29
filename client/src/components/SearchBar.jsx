@@ -1,17 +1,28 @@
 import { useState } from 'react'
-import { useLazyQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import { QUERY_USER } from '../../utils/queries'
 
 export default function SearchBar({ onFormSubmit}) {
     const [searchTerm, setSearchTerm] = useState('');
-    const [getUser, { data }] = useLazyQuery(QUERY_USER);
+
+
+    const { data, loading, error } = useQuery(QUERY_USER, {
+        variables: { username: searchTerm },
+        skip: !searchTerm
+    });
+
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error.message}</p>;
+
+    useEffect(() => {
+        if (data && data.user) {
+            onFormSubmit([data.user]);
+        }
+    }, [data, onFormSubmit]);
+
 
     const handleSearchSubmit = (e) => {
         e.preventDefault();
-        getUser({ variables: { username: searchTerm } });
-        if (data) {
-            onFormSubmit([data.user]);
-        }
     };
 
     return (

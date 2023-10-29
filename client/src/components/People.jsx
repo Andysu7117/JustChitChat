@@ -40,7 +40,7 @@ export default function SearchList({ users }) {
                             {friendId.includes(user._id) ? (
                                     <button
                                         type="button"
-                                        className="inline-flex w-full justify-center rounded-md bg-blue px-3 py-2 text-sm font-semibold text-darkestpink shadow-sm"
+                                        className="inline-flex w-full justify-center rounded-md bg-grey-300 px-3 py-2 text-sm font-semibold text-darkestpink shadow-sm"
                                         disabled
                                     >
                                     Friends
