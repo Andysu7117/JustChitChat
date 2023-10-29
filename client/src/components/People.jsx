@@ -7,7 +7,7 @@ export default function SearchList({ users }) {
     const { data, loading, error } = useQuery(QUERY_ME);
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error.message}</p>;
-    const friendsList = data.me.friends;
+    const friendsList = data.map((friend) => friend._id);
     console.log(friendsList);
 
     const handleAddFriend = async (userId) => {
