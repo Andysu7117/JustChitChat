@@ -41,7 +41,7 @@ const typeDefs = `
 
   type Subscription {
     messageAdded(receiverId: ID!): Message
-}
+  }
 `;
 
 module.exports = typeDefs;

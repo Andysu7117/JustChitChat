@@ -9,10 +9,7 @@ const SendMessage = ({ receiverId }) => {
   const [addMessage] = useMutation(ADD_MESSAGE, {
     onError: (error) => {
       console.log("error", error);
-    },
-    onCompleted: () => {
-      setValue("");
-    },
+    }
   });
 
   const handleSendMessage = async (e) => {
@@ -22,6 +19,8 @@ const SendMessage = ({ receiverId }) => {
       alert("Enter a valid message!");
       return;
     }
+
+    setValue("")
 
     try {
       console.log("variables", value, receiverId);

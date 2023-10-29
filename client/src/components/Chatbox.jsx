@@ -25,6 +25,8 @@ const ChatBox = ({ receiverId }) => {
     variables: { receiverId },
   });
 
+  console.log("subscriptiondata", subscriptionData)
+
   useEffect(() => {
     if (data && data.messages) {
         setMessages(data.messages);
