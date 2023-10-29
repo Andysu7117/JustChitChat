@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_USER } from '../../utils/queries'
 
 export default function SearchBar({ onFormSubmit}) {
+    const [inputValue, setInputValue] = useState('');
     const [searchTerm, setSearchTerm] = useState('');
 
 
@@ -20,11 +21,12 @@ export default function SearchBar({ onFormSubmit}) {
 
     const handleSearchSubmit = (e) => {
         e.preventDefault();
+        setSearchTerm(inputValue);
     };
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error.message}</p>;
-    
+
     return (
         <div class="mb-3">
             <form onSubmit={handleSearchSubmit}>
@@ -35,6 +37,7 @@ export default function SearchBar({ onFormSubmit}) {
                     placeholder="Search"
                     aria-label="Search"
                     aria-describedby="button-addon2"
+                    value={inputValue}
                     onChange={(e) => setSearchTerm(e.target.value)} />
 
                     <span
