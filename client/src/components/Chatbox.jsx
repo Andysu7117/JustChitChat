@@ -7,7 +7,7 @@ import SendMessage from "./SendMessage";
 const ChatBox = ({ receiverId }) => { 
   const messagesEndRef = useRef();
   const { data, loading, error } = useQuery(QUERY_MESSAGES, {
-    pollInterval: 5000,
+    pollInterval: 500,
     variables: {
       receiverId,
       limit: 50,

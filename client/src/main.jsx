@@ -9,6 +9,7 @@ import People from "./pages/People"
 import Error from "./pages/Error"
 import Login from "./pages/Login"
 import Signup from "./pages/Signup"
+import Profile from './pages/Profile';
 
 const router = createBrowserRouter([
     {
@@ -31,6 +32,9 @@ const router = createBrowserRouter([
             }, {
                 path: '/people',
                 element: <People />
+            }, {
+                path: '/profile',
+                element: <Profile />
             }
         ]
     }
