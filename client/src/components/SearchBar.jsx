@@ -38,7 +38,7 @@ export default function SearchBar({ onFormSubmit}) {
                     aria-label="Search"
                     aria-describedby="button-addon2"
                     value={inputValue}
-                    onChange={(e) => setSearchTerm(e.target.value)} />
+                    onChange={(e) => setInputValue(e.target.value)} />
 
                     <span
                     class="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-neutral-700 dark:text-neutral-200"
