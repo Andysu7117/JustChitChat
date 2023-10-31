@@ -24,14 +24,11 @@ const Signup = () => {
   
     const handleFormSubmit = async (event) => {
       event.preventDefault();
-      console.log(formState);
   
       try {
         const { data } = await addUser({
             variables: { ...formState }
         });
-
-        console.log("Apollo response data: ", data);
 
         if (!data || !data.addUser || !data.addUser.token) {
             console.error("Unexpected data structure from addUser mutation:", data);

@@ -7,9 +7,7 @@ const Message = ({ message }) => {
   const { data, loading, error } = useQuery(QUERY_ME);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
-  console.log("currentuser", data)
-  console.log("senderId", message)
-  console.log("message", message.message)
+
   return (
     <div className={`flex ${message.senderId._id === data.me._id ? "justify-end" : "justify-start"} mb-4`}>
       <div className="flex items-center">

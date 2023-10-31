@@ -9,7 +9,6 @@ export default function SearchList({ users }) {
     if (error) return <p>Error: {error.message}</p>;
     const friendsList = data.me.friends;
     const friendId = friendsList.map((friend) => friend._id);
-    console.log("friendslist", friendsList, "friendId", friendId);
 
     const handleAddFriend = async (userId) => {
         try {
@@ -23,7 +22,6 @@ export default function SearchList({ users }) {
         }
     };
 
-    console.log(users)
     return (
         <ul role="list" className="divide-y divide-pink">
             {users.map((user) => (
@@ -54,13 +52,6 @@ export default function SearchList({ users }) {
                                     Add Friend
                                     </button>
                                 )}
-                            {/* <button
-                                type="button"
-                                className="inline-flex w-full justify-center rounded-md bg-lightestpink px-3 py-2 text-sm font-semibold text-darkestpink shadow-sm hover:bg-pink sm:ml-3 sm:w-auto"
-                                onClick={() => handleAddFriend(user._id)}
-                            >
-                            Add Friend
-                            </button> */}
                         </div>
                     </div>
                 </li>

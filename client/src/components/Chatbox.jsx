@@ -25,7 +25,6 @@ const ChatBox = ({ receiverId }) => {
     variables: { receiverId },
   });
 
-  console.log("subscriptiondata", subscriptionData)
 
   useEffect(() => {
     if (data && data.messages) {
@@ -57,7 +56,7 @@ const ChatBox = ({ receiverId }) => {
       <div ref={messagesEndRef} className="w-full">
         <div>
           {messages.map((message) => (
-            <Message key={message.id} message={message} />
+            <Message message={message} />
           ))}
           </div>
       </div>

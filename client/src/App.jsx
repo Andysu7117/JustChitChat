@@ -34,7 +34,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <ChatProvider>
-        <Header />
+        <Header className="w-screen sm:w-screen" />
         <Outlet />
         <Footer />
       </ChatProvider>

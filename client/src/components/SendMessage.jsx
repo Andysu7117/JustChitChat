@@ -23,7 +23,6 @@ const SendMessage = ({ receiverId }) => {
     setValue("")
 
     try {
-      console.log("variables", value, receiverId);
       await addMessage({
         variables: {
           message: value,

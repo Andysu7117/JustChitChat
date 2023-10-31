@@ -40,7 +40,6 @@ const resolvers = {
       },
       me: async (parent, args, context) => {
         if (context.user) {
-          console.log("me", context.user);
           return User.findOne({ _id: context.user._id }).populate('friends');
         }
         throw AuthenticationError;
@@ -74,9 +73,7 @@ const resolvers = {
           if (!context.user) {
               throw new AuthenticationError("You need to be logged in!");
           }
-          console.log(userId)
           const friendToAdd = await User.findOne({ _id: userId });
-          console.log(friendToAdd)
           if (!friendToAdd) {
               throw new Error("User not found");
           }
@@ -113,8 +110,6 @@ const resolvers = {
           }
           const sender = await User.findOne({ _id: context.user._id });
           const receiver = await User.findOne({ _id: receiverId });
-          console.log(sender);
-          console.log(receiver);
           
           const newMessage = new Message({
               senderId: sender,
