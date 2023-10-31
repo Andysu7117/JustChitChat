@@ -10,7 +10,7 @@ export default function Home() {
               alt="Your Company"
             />
             <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-darkestpink">
-              Welcome to JustChitChat the place to just Chit Chat
+            Welcome to JustChitChat we are Revolutionizing the way we connect! Dive into a world where conversations flow seamlessly, whether you're catching up with old friends or making new ones. Experience messaging that's intuitive, fun, and designed with you in mind. Don't just chat, JustChitChat!
             </h2>
         </div>
     </main>

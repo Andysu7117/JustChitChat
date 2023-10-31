@@ -1,6 +1,6 @@
 # JustChitChat
 
-Welcome to JustChitChat the place to go to Just Chit Chat with your friends.
+Welcome to JustChitChat we are Revolutionizing the way we connect! Dive into a world where conversations flow seamlessly, whether you're catching up with old friends or making new ones. Experience messaging that's intuitive, fun, and designed with you in mind. Don't just chat, JustChitChat!
 
 ## Getting Started
 
